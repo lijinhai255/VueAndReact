@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!-- 容器元素 -->
+	<div id="app">
+		<ul>
+			<!-- 循环指令，创建数据 -->
+			<!-- <li v-for="abc in news">{{abc}}</li> -->
+			<!-- 斑马线 -->
+			<!-- <li v-for="(item, index) in news" :key="index" :style="{
+				background: index % 2 ? 'skyblue' : '#efefef'
+			}">{{item}}</li> -->
+			<!-- 第一个成员背景变成金黄色 -->
+			<!-- <li v-for="(item, index) in news" :style="{
+				background: index === 0 ? 'gold' : ''
+			}">{{item}}</li> -->
+			<!-- 最后一个成员背景变成粉色 -->
+			<!-- <li v-for="(item, index) in news" :style="{
+				background: index === news.length - 1 ? 'pink' : ''
+			}">{{item}}</li> -->
+			<!-- <div v-for="item in news">
+				<li>{{item}}</li>
+				<hr>
+			</div> -->
+			<!-- 模板标签 -->
+			<template v-for="item in news">
+				<li>{{item}}</li>
+				<hr>
+			</template>
+		</ul>
+	</div>
+<script type="text/javascript" src="dist/02.js"></script>
+</body>
+</html>

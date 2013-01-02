@@ -1,0 +1,23 @@
+@import url(../../base.less);
+.app-aside {
+	width: 250px;
+	float: right;
+	padding-top: 80px;
+	li {
+		font-size: 14px;
+		line-height: 30px;
+		padding-left: 30px;
+		border-left: 3px solid transparent;
+		list-style: none;
+		a {
+			color: #333;
+			text-decoration: none;
+		}
+		&:hover {
+			border-left-color: @navColor;
+			a {
+				color: @navColor;
+			}
+		}
+	}
+}

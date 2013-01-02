@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!-- 容器元素 -->
+	<div id="app">
+		<p>
+			<label for="">用户名</label>
+			<input type="text" v-model="username">
+			<!-- 使用校验指令校验用户 -->
+			<span v-ickt-check="username" test="^\w{4,8}$" warn-text="用户名是4-8位的"></span>
+		</p>
+		<p>
+			<label for="">用户名</label>
+			<input type="text" v-model="password">
+			<!-- 使用校验指令校验用户 -->
+			<span v-ickt-check="password" test="^\w{2,9}$" warn-text="密码是2-9位的"></span>
+		</p>
+	</div>
+<script type="text/javascript" src="dist/09.js"></script>
+</body>
+</html>

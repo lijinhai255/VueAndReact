@@ -1,0 +1,30 @@
+@navColor: #5b4282;
+// @color: gold;
+
+// body {
+// 	background-color: @color;
+// }
+
+// 设置宽度并居中
+.wcenter(@w: auto, @mt: 0, @mb: @mt) {
+	width: @w;
+	margin: @mt auto @mt;
+}
+// 文字垂直居中
+.hlh(@h) {
+	height: @h;
+	line-height: @h;
+}
+// 按钮样式
+.ui-btn(@c: #fff, @bg: @navColor) {
+	color: @c;
+	border: 1px solid @c;
+	background-color: @bg;
+	padding: 12px 40px;
+	font-size: 18px;
+	border-radius: 6px;
+	&:hover {
+		color: @bg;
+		background: @c;
+	}
+}

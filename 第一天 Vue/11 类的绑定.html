@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!-- 视图 -->
+	<div id="app">
+		<!-- 新浪博客 -->
+		<!-- 数据驱动视图 -->
+		<div class="blog" @mouseenter="showLayer" @mouseout="hideLayer">
+			<span>博客</span>
+			<!-- 字符串 -->
+			<!-- <ul :class="cls"> -->
+			<!-- 数组 -->
+			<!-- <ul :class="[cls]"> -->
+			<!-- 对象 -->
+			<ul :class="{
+				show: cls 
+			}">
+				<li>博客评论</li>
+				<li>未读提醒</li>
+			</ul>
+		</div>
+		<!-- 绑定数组 -->
+		<h1 :class="['red bg-gold', 'fz-50']">爱创课堂</h1>
+		<!-- 绑定对象 -->
+		<h1 :class="{
+			'bg-pink': true,
+			'circle': 10,
+			'green': null
+		}">爱创课堂</h1>
+		<!-- 绑定字符串 -->
+		<h1 :class="'red' + ' bg-pink'">爱创课堂</h1>
+	</div>
+<!-- 发布的文件 -->
+<script type="text/javascript" src="dist/11.js"></script>
+</body>
+</html>

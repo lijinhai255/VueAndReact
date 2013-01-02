@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!-- 视图 -->
+	<div id="app">
+		<h1>{{msg}}--{{msg}}</h1>
+	</div>
+<script type="text/javascript">
+// 定义数据
+var data = {
+	msg: '',
+	// 备份数据
+	_data: {}
+}
+// 视图模型对象
+// 为data属性设置特性
+Object.defineProperty(data, 'msg', {
+	// 取值器
+	get: function() {
+		// 不允许直接访问msg
+		// 要访问备份数据
+		return this._data.msg
+	},
+	// 赋值器
+	set: function(value) {
+		// 不要直接修改msg，应该修改备份的数据
+		this._data.msg = value;
+		// 更新视图
+		updateView(this._data);
+	}
+})
+// 获取模板
+var tpl = document.getElementById('app').innerHTML;
+// 更新视图
+function updateView(data) {
+	// 匹配插值语法，替换内容
+	var html = tpl.replace(/{{(\w+)}}/g, function(match, $1) {
+		// 返回data中的属性数据
+		return data[$1] === undefined ? '' : data[$1];
+	})
+	// console.log(html)
+	// 更新视图
+	document.getElementById('app').innerHTML = html;
+}
+// 修改数据
+data.msg = 'hello'
+// console.log(data.msg)
+</script>
+</body>
+</html>

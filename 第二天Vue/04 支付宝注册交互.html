@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!-- 容器元素 -->
+	<div id="app">
+		<div class="main">
+			<label for="">账户名</label>
+			<input 
+				type="text" 
+				v-model="msg"
+				@keydown.up="choosePrevLi"
+				@keyup.down="chooseNextLi"
+				@keyup.enter="chooseCurrentLi"
+			>
+			<ul v-show="msg">
+				<!-- 我们要处理email和msg再显示 -->
+				<li v-for="item in dealEmail" @click="clickChooseLi">{{dealMsg}}@{{item}}<template v-if="item === '189'">.cn</template><template v-else>.com</template></li>
+			</ul>
+		</div>
+	</div>
+<script type="text/javascript" src="dist/04.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!-- 容器元素 -->
+	<div id="app">
+		<!-- 定义一组单选框 -->
+		<!-- 数据双向绑定 -->
+		<span>运动：</span>
+		<label>足球<input type="radio" value="football" checked v-model="sports"></label>
+		<label>篮球<input type="radio" value="basketball" v-model="sports"></label>
+		<label>乒乓球<input type="radio" value="pingpang" v-model="sports"></label>
+		<!-- 查看结果 -->
+		<h1>查看结果：{{sports}}</h1>
+
+		<!-- 多选框 -->
+		<span>兴趣：</span>
+		<label>足球<input type="checkbox" checked v-model="interest.football"></label>
+		<label>篮球<input type="checkbox" v-model="interest.basketball"></label>
+		<label>乒乓球<input type="checkbox" :true-value="'选中乒乓球'" :false-value="notChoose" v-model="interest.pingpang"></label>
+		<!-- 查看结果 -->
+		<h1>查看结果：{{interest}}</h1>
+	</div>
+<script type="text/javascript" src="dist/06.js"></script>
+</body>
+</html>

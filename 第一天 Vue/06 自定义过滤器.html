@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!-- 视图 -->
+	<div id="app">
+		<!-- 变成大写 -->
+		<h1>{{msg | uppercase}}</h1>
+		<!-- 驼峰式命名 -->
+		<h1>{{ title | toCamel }}</h1>
+		<h1>{{ title | toCamel(true, 100, 'abc') | uppercase }}</h1>
+	</div>
+<!-- 发布的文件 -->
+<script type="text/javascript" src="dist/06.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!-- 容器元素 -->
+	<div id="app">
+		<input type="text" v-model="msg">
+		<h1 @click="clickH1">parent: {{msg}}--{{dealMsg}}</h1>
+		<!-- 1 使用组件 -->
+		<!-- <home></home> -->
+		<Home></Home>
+	</div>
+<!-- html5建议使用template模板标签 -->
+<template id="tpl">
+<div>
+	<h1 @click="clickH1" :style="{ color: color }">hello {{msg}}--{{dealMsg}}</h1>
+</div>
+</template>
+<!-- 模板标签 -->
+<!-- <script type="text/template" id="tpl">
+	<h1>child script</h1>
+</script> -->
+<script type="text/javascript" src="dist/10.js"></script>
+</body>
+</html>

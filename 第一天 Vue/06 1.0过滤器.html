@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!-- 定义视图 -->
+	<div id="app">
+		<!-- 插值 -->
+		<h1>{{num | currency '￥'}}</h1>
+		<h1>{{msg | uppercase}}</h1>
+	</div>
+<script type="text/javascript" src="vue1.js"></script>
+<script type="text/javascript">
+// 定义模型
+var data = {
+	msg: 'hello',
+	num: 12345678.1234567
+}
+// 任务是将数据渲染到视图中。
+// 定义视图模型
+var app = new Vue({
+	// 绑定视图
+	el: '#app',
+	// 绑定模型
+	data: data
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+.red {
+	color: red;
+}
+.green {
+	color: green;
+}
+.bg-gold {
+	background: gold;
+}
+.bg-pink {
+	background: pink;
+}
+.circle {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+.fz-50 {
+	font-size: 50px;
+}
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.blog {
+	// &.show {
+	// 	ul {
+	// 		display: block;
+	// 	}
+	// }
+	span {
+		display: inline-block;
+		padding: 10px 30px;
+		font-size: 14px;
+		background: #efefef;
+	}
+	ul {
+		width: 200px;
+		display: none;
+		li {
+			border: 1px solid #f30;
+			border-top: none;
+			line-height: 30px;
+			padding-left: 10px;
+			background: #fff;
+		}
+		&.show {
+			display: block;
+		}
+	}
+}
+
+// 商品
+.product {
+	margin: 100px auto;
+	width: 400px;
+	label {
+		margin-right: 40px;
+	}
+	p {
+		margin-bottom: 20px;
+	}
+	span {
+		display: inline-block;
+		padding: 8px 12px;
+		border: 1px solid #ccc;
+		margin-right: 10px;
+		cursor: pointer;
+	}
+	img {
+		vertical-align: middle;
+		margin-right: 10px;
+		border: 1px solid #ccc;
+		cursor: pointer;
+		&.disabled {
+			border-style: dashed;
+			cursor: not-allowed;
+		}
+	}
+}

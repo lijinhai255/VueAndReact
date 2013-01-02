@@ -1,0 +1,54 @@
+body {
+	background: #efefef;
+}
+.main {
+	width: 600px;
+	margin: 100px auto;
+	background: #fff;
+	border: 1px solid #ccc;
+	padding-top: 100px;
+	position: relative;
+	height: 400px;
+	label {
+		margin-left: 100px;
+		margin-right: 20px;
+	}
+	input {
+		padding: 10px;
+		width: 300px;
+	}
+	ul {
+		position: absolute;
+		top: 122px;
+		left: 172px;
+		width: 322px;
+		padding: 0;
+		border: 1px solid #ccc;
+		background: #fff;
+		li {
+			list-style: none;
+			padding: 6px 10px;
+			font-size: 14px;
+			&:hover,
+			&.choose {
+				background: #efefef;
+			}
+		}
+	}
+}
+
+.layer {
+	width: 400px;
+	height: 400px;
+	background: green;
+}
+.demo-enter,
+.demo-leave-to {
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+.demo-enter-active,
+.demo-leave-active {
+	transition: all 1s;
+}

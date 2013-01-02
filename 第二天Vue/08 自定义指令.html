@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!-- 容器元素 -->
+	<div id="app">
+		<input type="text" v-model="msg">
+		<h1>插值:{{msg}}</h1>
+		<!-- 第一是使用指令 -->
+		<h1 v-ickt-html="'111' + msg"></h1>
+		<!-- 单次插值 -->
+		<h1 v-ickt-once="msg"></h1>
+		<input type="text" v-model="title">
+		<h1 v-ickt-html="title"></h1>
+	</div>
+<script type="text/javascript" src="dist/08.js"></script>
+</body>
+</html>

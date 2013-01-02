@@ -1,0 +1,79 @@
+// 引入样式库
+@import url(../../base.less);
+.app-home {
+	.home-banner {
+		background: @navColor;
+		color: #fff;
+		padding: 80px 0 100px;
+		text-align: center;
+		.logo {
+			.wcenter(140px);
+			.hlh(140px);
+			border-radius: 10px;
+			border: 1px solid #fff;
+			font-size: 120px;
+		}
+		h1 {
+			.wcenter(800px, 40px);
+			font-size: 30px;
+			line-height: 40px;
+		}
+		.btn {
+			.ui-btn();
+		}
+		p {
+			margin-top: 30px;
+			color: lighten(@navColor, 20);
+		}
+	}
+	// 第一个列表
+	.first-list {
+		padding: 120px 0 80px;
+		border-bottom: 1px solid #ccc;
+		text-align: center;
+		h2 {
+			font-size: 40px;
+		}
+		.info {
+			.wcenter(880px, 20px);
+			font-size: 20px;
+		}
+		.line {
+			.wcenter(100px, 60px);
+			border-top: 1px solid #ccc;
+		}
+		li {
+			float: left;
+			width: 100%/3;
+			list-style: none;
+			padding: 0 8px;
+			img {
+				width: 90%;
+			}
+			h3 {
+				font-size: 30px;
+			}
+			p {
+				font-size: 16px;
+				line-height: 28px;
+			}
+		}
+		.btn {
+			.ui-btn(@navColor, #fff);
+			margin-top: 10px;
+		}
+	}
+	// 第二个列表样式复用第一个列表样式
+	.second-list {
+		// 使用混合
+		.first-list;
+		// 重写样式
+		li {
+			width: 100%/4;
+			padding: 0 1px;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

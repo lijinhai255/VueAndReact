@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!-- 容器元素 -->
+	<div id="app">
+		<button @click="toggle">切换</button>
+		<!-- 通过name属性设置过渡名称 -->
+		<transition name="demo">
+			<div class="layer" v-show="isShow"></div>
+		</transition>
+	</div>
+<script type="text/javascript" src="dist/05.js"></script>
+</body>
+</html>

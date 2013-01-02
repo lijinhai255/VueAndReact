@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!-- 容器元素 -->
+	<div id="app">
+		<!-- 选择颜色 -->
+		<!-- <select v-model="color">
+			<option>red</option>
+			<option>green</option>
+			<option>blue</option>
+		</select> -->
+		<!-- <select v-model="color">
+			<option value="isRed">red</option>
+			<option value="isGreen">green</option>
+			<option value="isBlue">blue</option>
+		</select> -->
+		<!-- 多选 -->
+		<!-- <select v-model="color" multiple>
+			<option value="isRed">red</option>
+			<option value="isGreen">green</option>
+			<option value="isBlue">blue</option>
+		</select> -->
+		<!-- 展示结果 -->
+		<!-- <h1>result: {{color}}</h1> -->
+
+		<!-- 显示选中的邮箱 -->
+		<h1>选中的邮箱: {{choosEmail}}</h1>
+		<!-- 定义下拉框 -->
+		<select v-model="choosEmail">
+			<option v-for="item in email" :value="item">@{{item}}<template v-if="item === 'yeah'">.net</template><template v-else>.com</template></option>
+		</select>
+	</div>
+<script type="text/javascript" src="dist/07.js"></script>
+</body>
+</html>

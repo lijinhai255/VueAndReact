@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!-- 视图 -->
+	<div id="app">
+		<h1>{{dealMsg}}</h1>
+		<!-- 先执行了计算属性数据，再执行了插值表达式 -->
+		<h1>{{dealMsg.slice(0, 5)}}</h1>
+	</div>
+<!-- 发布的文件 -->
+<script type="text/javascript" src="dist/08.js"></script>
+</body>
+</html>

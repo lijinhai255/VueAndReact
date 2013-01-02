@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!-- 视图 -->
+	<div id="app">
+		
+		<!-- 创建视图 -->
+		<div class="product">
+			<p>
+				<label for="">尺码</label>
+				<span :style="{borderColor: span[0]}" @click="toggle(37)">37</span>
+				<span :style="{borderColor: span[1]}"@click="toggle(38)">38</span>
+				<span :style="{borderColor: span[2]}"@click="toggle(39)">39</span>
+			</p>
+			<p>
+				<label for="">颜色</label>
+				<img :class="img[0]" src="img/01.jpg" alt="">
+				<img :class="img[1]" src="img/02.jpg" alt="">
+				<img :class="img[2]" src="img/03.jpg" alt="">
+			</p>
+		</div>
+
+
+		<!-- 绑定对象 -->
+		<h1 :style="{
+			color: 'red',
+			'background-color': 'green'
+		}">爱创课堂</h1>
+		<!-- 建议驼峰式命名 -->
+		<!-- 数组 -->
+		<h1 :style="[
+			{
+				color: 'pink'
+			},
+			{
+				backgroundColor: 'gold',
+				fontSize: '20px'
+			}
+		]">爱创课堂</h1>
+		<!-- 字符串 -->
+		<h1 :style="'color: ' + color">爱创课堂</h1>
+	</div>
+<!-- 发布的文件 -->
+<script type="text/javascript" src="dist/12.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+<style type="text/css">
+div {
+/*	margin: 100px;
+	padding: 100px;
+	width: 200px;
+	height: 200px;
+	background: pink;
+	border: 100px dashed green;*/
+}
+.red {
+	color: red;
+}
+.green {
+	color: green;
+}
+</style>
+</head>
+<body>
+	<h1 onclick="alert(111)">hello</h1>
+	<div>11111</div>
+	<div class="red">11</div>
+	<div class="green">222</div>
+	<div id="app"></div>
+<script type="text/javascript" src="lib/react.js"></script>
+<script type="text/javascript" src="lib/react-dom.js"></script>
+<script type="text/javascript" src="lib/browser.js"></script>
+<script type="text/babel">
+// 定义组件
+var Ickt = React.createClass({
+	demo(e, id, oe) {
+		// console.log(arguments)
+		console.log(e.target, e.currentTarget)	
+		console.log(oe.target, oe.currentTarget)	
+	},
+	render() {
+		let title = '爱创课堂'
+		return (
+			<div>
+				<h1 key="100">hello {title}</h1>
+				<h1>{'hello ' + title}</h1>
+				<button onClick={this.demo}>123</button>
+			</div>
+		)
+	}
+})
+ReactDOM.render(<Ickt />, app)
+</script>
+</body>
+</html>

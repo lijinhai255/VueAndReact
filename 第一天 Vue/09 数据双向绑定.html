@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+<style type="text/css">
+[v-cloak] {
+	display: none;
+}
+</style>
+</head>
+<!-- v-cloak -->
+<body>
+	<!-- 视图 -->
+	<div id="app">
+		<!-- 通过v-model指令实现数据双向绑定 -->
+		<input type="text" v-model="msg">
+		<h1>{{msg}}</h1>
+		<input type="text" v-model="title">
+		<h1 v-cloak>{{title}}</h1>
+	</div>
+<!-- 发布的文件 -->
+<script type="text/javascript" src="dist/09.js"></script>
+</body>
+</html>

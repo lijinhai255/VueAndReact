@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!-- 容器元素 -->
+	<div id="app">
+		<input type="text" v-model="msg">
+		<h1>{{msg}}</h1>
+		<!-- 单次插值 -->
+		<h1>{{*msg}}</h1>
+		<!-- 渲染html插值 -->
+		<h1>{{{msg}}}</h1>
+	</div>
+<script type="text/javascript" src="vue1.js"></script>
+<script type="text/javascript">
+	new Vue({
+		el: '#app',
+		data: {
+			msg: '<a href="javascript:alert(111)">hello</a>'
+		}
+	})
+</script>
+</body>
+</html>

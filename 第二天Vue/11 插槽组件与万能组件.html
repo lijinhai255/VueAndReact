@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!-- 容器元素 -->
+	<div id="app">
+		<!-- <input type="text" v-model="msg">
+		<h1 @click="clickH1">parent: {{msg}}--{{dealMsg}}</h1> -->
+		<!-- 1 使用组件 -->
+		<!-- <home></home> -->
+		<!-- 通过slot属性定义名称 -->
+<!-- 		<Home>
+			<h2 slot="header">header part</h2>
+			<h2>body part</h2>
+			<h2 slot="footer">footer part</h2>
+		</Home> -->
+		<!-- <Home></Home> -->
+		<!-- 万能组件 -->
+		<!-- <component is="Home"></component> -->
+		<!-- 选项卡 -->
+		<button @click="showPage('Home')">首页</button>
+		<button @click="showPage('List')">列表页</button>
+		<component :is="page"></component>
+	</div>
+<!-- html5建议使用template模板标签 -->
+<template id="tpl">
+<div>
+	
+	<h1 @click="clickH1" :style="{ color: color }">hello {{msg}}--{{dealMsg}}</h1>
+	<!-- 通过插槽引入内容 -->
+	
+</div>
+</template>
+<script type="text/javascript" src="dist/11.js"></script>
+</body>
+</html>

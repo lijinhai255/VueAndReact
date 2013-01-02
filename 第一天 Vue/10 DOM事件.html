@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<!-- 视图 -->
+	<div id="app">
+		<button v-on:click="clickBtn">按钮</button>
+		<!-- @语法糖 -->
+		<button @click="clickBtn(100, true, 'hello', $event)">按钮</button>
+		<!-- 键盘事件 -->
+		<!-- <input type="text" v-model="msg" v-on:keyup="showMsg"> -->
+		<input type="text" v-model="msg" v-on:keyup.enter="showMsg">
+		<!-- <input type="text" v-model="msg" v-on:keyup.z="showMsg"> -->
+	</div>
+<!-- 发布的文件 -->
+<script type="text/javascript" src="dist/10.js"></script>
+</body>
+</html>
